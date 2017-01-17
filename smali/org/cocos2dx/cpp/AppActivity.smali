@@ -311,7 +311,7 @@
 
     if-ne v0, v1, :cond_0
 
-    invoke-direct {p0, p1}, Lorg/cocos2dx/cpp/AppActivity;->yijiePay(I)V
+
 
     :goto_0
     return-void
@@ -328,7 +328,6 @@
     goto :goto_0
 
     :cond_1
-    invoke-direct {p0, p1}, Lorg/cocos2dx/cpp/AppActivity;->yijiePay(I)V
 
     invoke-direct {p0, p1}, Lorg/cocos2dx/cpp/AppActivity;->yufengpay(I)V
 
@@ -1231,34 +1230,7 @@
 
 .method private initUserId()V
     .locals 4
-
-    invoke-static {p0}, Lcom/snowfish/android/ahelper/APaymentUnity;->getUserId(Landroid/content/Context;)J
-
-    move-result-wide v0
-
-    const-string v2, "yj_user_id"
-
-    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lorg/cocos2dx/lib/Cocos2dxHelper;->setStringForKey(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lorg/cocos2dx/cpp/AppActivity;->useridHandler:Landroid/os/Handler;
-
-    const/16 v1, -0x3e8
-
-    const-wide/16 v2, 0x3e8
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
-
-    :cond_0
+	
     return-void
 .end method
 
@@ -1694,42 +1666,6 @@
     goto :goto_0
 .end method
 
-.method private yijieExit()V
-    .locals 1
-
-    new-instance v0, Lorg/cocos2dx/cpp/AppActivity$16;
-
-    invoke-direct {v0, p0}, Lorg/cocos2dx/cpp/AppActivity$16;-><init>(Lorg/cocos2dx/cpp/AppActivity;)V
-
-    invoke-static {p0, v0}, Lcom/snowfish/cn/ganga/offline/helper/SFCommonSDKInterface;->onExit(Landroid/app/Activity;Lcom/snowfish/cn/ganga/offline/helper/SFGameExitListener;)V
-
-    return-void
-.end method
-
-.method private yijiePay(I)V
-    .locals 2
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    new-instance v1, Lorg/cocos2dx/cpp/AppActivity$14;
-
-    invoke-direct {v1, p0, p1}, Lorg/cocos2dx/cpp/AppActivity$14;-><init>(Lorg/cocos2dx/cpp/AppActivity;I)V
-
-    invoke-static {p0, v0, v1}, Lcom/snowfish/cn/ganga/offline/helper/SFCommonSDKInterface;->pay(Landroid/app/Activity;Ljava/lang/String;Lcom/snowfish/cn/ganga/offline/helper/SFIPayResultListener;)V
-
-    return-void
-.end method
-
 .method private yufengpay(I)V
     .locals 5
 
@@ -1891,7 +1827,6 @@
 
     invoke-virtual {v0}, Lorg/hj201606/lib/HejuInit;->start()V
 
-    invoke-static {p0}, Lcom/snowfish/cn/ganga/offline/helper/SFCommonSDKInterface;->onInit(Landroid/app/Activity;)V
 
     invoke-static {p0}, Lcom/b/a/a/a;->d(Landroid/content/Context;)V
 
