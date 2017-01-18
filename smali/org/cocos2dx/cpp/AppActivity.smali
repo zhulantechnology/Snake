@@ -341,19 +341,12 @@
 
     if-ne v0, v1, :cond_1
 
-    invoke-direct {p0, p1}, Lorg/cocos2dx/cpp/AppActivity;->yufengpay(I)V
+
 
     goto :goto_0
 
     :cond_1
 
-    invoke-direct {p0, p1}, Lorg/cocos2dx/cpp/AppActivity;->yufengpay(I)V
-
-    invoke-direct {p0, p1}, Lorg/cocos2dx/cpp/AppActivity;->bfgPay(I)V
-
-    invoke-direct {p0, p1}, Lorg/cocos2dx/cpp/AppActivity;->tongyuPay(I)V
-
-    invoke-direct {p0, p1}, Lorg/cocos2dx/cpp/AppActivity;->zhangPay(I)V
 
     goto :goto_0
 .end method
