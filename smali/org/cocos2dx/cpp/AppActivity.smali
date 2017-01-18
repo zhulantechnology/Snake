@@ -325,7 +325,8 @@
 
     sget v0, Lcom/chukong/cocosplay/client/b;->f:I
 
-    const/4 v1, 0x2
+    const/4 v1, 0x1
+    invoke-direct {p0, v1, p1}, Lorg/cocos2dx/cpp/AppActivity;->handleAllResu(ZI)V
 
     if-ne v0, v1, :cond_0
 
