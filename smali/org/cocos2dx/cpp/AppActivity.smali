@@ -1,9 +1,6 @@
 .class public Lorg/cocos2dx/cpp/AppActivity;
 .super Lorg/cocos2dx/lib/Cocos2dxActivity;
 
-# interfaces
-.implements Lcom/mj/jar/pay/a;
-
 
 # static fields
 .field public static final appId:Ljava/lang/String; = "2501"
@@ -47,8 +44,6 @@
 .field private dealed:Z
 
 .field private endU:Ljava/lang/String;
-
-.field private mjBilling:Lcom/mj/jar/pay/c;
 
 .field public payhander:Landroid/os/Handler;
 
@@ -864,81 +859,6 @@
     .end packed-switch
 .end method
 
-.method public static getYfPaycode(I)Ljava/lang/String;
-    .locals 1
-
-    packed-switch p0, :pswitch_data_0
-
-    const-string v0, "000371000"
-
-    :goto_0
-    return-object v0
-
-    :pswitch_0
-    const-string v0, "000371000"
-
-    goto :goto_0
-
-    :pswitch_1
-    const-string v0, "000371001"
-
-    goto :goto_0
-
-    :pswitch_2
-    const-string v0, "000371002"
-
-    goto :goto_0
-
-    :pswitch_3
-    const-string v0, "000371003"
-
-    goto :goto_0
-
-    :pswitch_4
-    const-string v0, "000371004"
-
-    goto :goto_0
-
-    :pswitch_5
-    const-string v0, "000371005"
-
-    goto :goto_0
-
-    :pswitch_6
-    const-string v0, "000371006"
-
-    goto :goto_0
-
-    :pswitch_7
-    const-string v0, "000371007"
-
-    goto :goto_0
-
-    :pswitch_8
-    const-string v0, "000371008"
-
-    goto :goto_0
-
-    :pswitch_9
-    const-string v0, "000371009"
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-        :pswitch_6
-        :pswitch_7
-        :pswitch_8
-        :pswitch_9
-    .end packed-switch
-.end method
-
 .method private handleAllResu(ZI)V
     .locals 1
 
@@ -1518,54 +1438,6 @@
     goto :goto_0
 .end method
 
-.method private yufengpay(I)V
-    .locals 5
-
-    iget-object v0, p0, Lorg/cocos2dx/cpp/AppActivity;->mjBilling:Lcom/mj/jar/pay/c;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
-
-    move-result-wide v2
-
-    invoke-static {v2, v3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {p1}, Lorg/cocos2dx/cpp/AppActivity;->getYfPaycode(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-direct {p0, p1}, Lorg/cocos2dx/cpp/AppActivity;->getPM(I)I
-
-    move-result v4
-
-    mul-int/lit8 v4, v4, 0x64
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v1, v2, v3}, Lcom/mj/jar/pay/c;->a(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    return-void
-.end method
-
 .method private zhangPay(I)V
     .locals 2
 
@@ -1644,28 +1516,6 @@
     invoke-super {p0, p1}, Lorg/cocos2dx/lib/Cocos2dxActivity;->onCreate(Landroid/os/Bundle;)V
 
     invoke-direct {p0}, Lorg/cocos2dx/cpp/AppActivity;->initParams()V
-
-    new-instance v0, Lcom/mj/jar/pay/c;
-
-    const-string v3, "000371"
-
-    const-string v4, "0000"
-
-    sget-object v5, Lcom/chukong/cocosplay/client/b;->c:Ljava/lang/String;
-
-    move-object v1, p0
-
-    move-object v2, p0
-
-    invoke-direct/range {v0 .. v5}, Lcom/mj/jar/pay/c;-><init>(Landroid/app/Activity;Lcom/mj/jar/pay/a;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    iput-object v0, p0, Lorg/cocos2dx/cpp/AppActivity;->mjBilling:Lcom/mj/jar/pay/c;
-
-    iget-object v0, p0, Lorg/cocos2dx/cpp/AppActivity;->mjBilling:Lcom/mj/jar/pay/c;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/mj/jar/pay/c;->a(Z)V
 
     invoke-direct {p0}, Lorg/cocos2dx/cpp/AppActivity;->handleUserRequestEveryDay()V
 
