@@ -37,7 +37,6 @@
 
 
 # instance fields
-.field private callBack:Lorg/zzf/core/ZhangPayCallback;
 
 .field curfeeid:I
 
@@ -145,12 +144,6 @@
     const-string v0, "/"
 
     iput-object v0, p0, Lorg/cocos2dx/cpp/AppActivity;->str4:Ljava/lang/String;
-
-    new-instance v0, Lorg/cocos2dx/cpp/AppActivity$3;
-
-    invoke-direct {v0, p0}, Lorg/cocos2dx/cpp/AppActivity$3;-><init>(Lorg/cocos2dx/cpp/AppActivity;)V
-
-    iput-object v0, p0, Lorg/cocos2dx/cpp/AppActivity;->callBack:Lorg/zzf/core/ZhangPayCallback;
 
     return-void
 .end method
@@ -269,14 +262,6 @@
     return-void
 .end method
 
-.method static synthetic access$9(Lorg/cocos2dx/cpp/AppActivity;)Lorg/zzf/core/ZhangPayCallback;
-    .locals 1
-
-    iget-object v0, p0, Lorg/cocos2dx/cpp/AppActivity;->callBack:Lorg/zzf/core/ZhangPayCallback;
-
-    return-object v0
-.end method
-
 .method public static allExit()V
     .locals 1
 
@@ -390,148 +375,6 @@
     return-void
 .end method
 
-.method private static getDesc(I)Ljava/lang/String;
-    .locals 1
-
-    packed-switch p0, :pswitch_data_0
-
-    const-string v0, ""
-
-    :goto_0
-    return-object v0
-
-    :pswitch_0
-    const-string v0, "\u83b7\u5f97788\u679a\u5e78\u8fd0\u661f\uff0c\u4ec5\u9700X.XX\u5143\uff0c\u5373\u53ef\u62e5\u6709\uff01"
-
-    goto :goto_0
-
-    :pswitch_1
-    const-string v0, "\u83b7\u5f97520\u679a\u5e78\u8fd0\u661f\uff0c\u4ec5\u9700X.XX\u5143\uff0c\u5373\u53ef\u62e5\u6709\uff01"
-
-    goto :goto_0
-
-    :pswitch_2
-    const-string v0, "\u83b7\u5f97560\u679a\u5e78\u8fd0\u661f\uff0c\u4ec5\u9700X.XX\u5143\uff0c\u5373\u53ef\u62e5\u6709\uff01"
-
-    goto :goto_0
-
-    :pswitch_3
-    const-string v0, "\u83b7\u5f97500\u679a\u5e78\u8fd0\u661f\uff0c\u4ec5\u9700X.XX\u5143\uff0c\u5373\u53ef\u62e5\u6709\uff01"
-
-    goto :goto_0
-
-    :pswitch_4
-    const-string v0, "\u83b7\u5f97228\u679a\u5e78\u8fd0\u661f\uff0c\u4ec5\u9700X.XX\u5143\uff0c\u5373\u53ef\u62e5\u6709\uff01"
-
-    goto :goto_0
-
-    :pswitch_5
-    const-string v0, "\u83b7\u5f9730\u679a\u5e78\u8fd0\u661f\uff0c\u4ec5\u9700X.XX\u5143\uff0c\u5373\u53ef\u62e5\u6709\uff01"
-
-    goto :goto_0
-
-    :pswitch_6
-    const-string v0, "\u83b7\u5f9768\u679a\u5e78\u8fd0\u661f\uff0c\u4ec5\u9700X.XX\u5143\uff0c\u5373\u53ef\u62e5\u6709\uff01"
-
-    goto :goto_0
-
-    :pswitch_7
-    const-string v0, "\u83b7\u5f97118\u679a\u5e78\u8fd0\u661f\uff0c\u4ec5\u9700X.XX\u5143\uff0c\u5373\u53ef\u62e5\u6709\uff01"
-
-    goto :goto_0
-
-    :pswitch_8
-    const-string v0, "\u83b7\u5f97228\u679a\u5e78\u8fd0\u661f\uff0c\u4ec5\u9700X.XX\u5143\uff0c\u5373\u53ef\u62e5\u6709\uff01"
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-        :pswitch_6
-        :pswitch_7
-        :pswitch_8
-    .end packed-switch
-.end method
-
-.method public static getFeePoint(I)Ljava/lang/String;
-    .locals 1
-
-    packed-switch p0, :pswitch_data_0
-
-    const-string v0, "18429"
-
-    :goto_0
-    return-object v0
-
-    :pswitch_0
-    const-string v0, "18429"
-
-    goto :goto_0
-
-    :pswitch_1
-    const-string v0, "18430"
-
-    goto :goto_0
-
-    :pswitch_2
-    const-string v0, "18431"
-
-    goto :goto_0
-
-    :pswitch_3
-    const-string v0, "18432"
-
-    goto :goto_0
-
-    :pswitch_4
-    const-string v0, "18433"
-
-    goto :goto_0
-
-    :pswitch_5
-    const-string v0, "18434"
-
-    goto :goto_0
-
-    :pswitch_6
-    const-string v0, "18435"
-
-    goto :goto_0
-
-    :pswitch_7
-    const-string v0, "18436"
-
-    goto :goto_0
-
-    :pswitch_8
-    const-string v0, "18437"
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-        :pswitch_6
-        :pswitch_7
-        :pswitch_8
-    .end packed-switch
-.end method
-
 .method public static getJavaActivity()Ljava/lang/Object;
     .locals 1
 
@@ -570,115 +413,6 @@
         :pswitch_0
         :pswitch_1
         :pswitch_2
-    .end packed-switch
-.end method
-
-.method private static getPMZZF(I)I
-    .locals 1
-
-    const/16 v0, 0xa
-
-    packed-switch p0, :pswitch_data_0
-
-    const/16 v0, 0x14
-
-    :goto_0
-    :pswitch_0
-    return v0
-
-    :pswitch_1
-    const/4 v0, 0x2
-
-    goto :goto_0
-
-    :pswitch_2
-    const/4 v0, 0x4
-
-    goto :goto_0
-
-    :pswitch_3
-    const/4 v0, 0x6
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_0
-    .end packed-switch
-.end method
-
-.method private static getPName(I)Ljava/lang/String;
-    .locals 1
-
-    packed-switch p0, :pswitch_data_0
-
-    const-string v0, ""
-
-    :goto_0
-    return-object v0
-
-    :pswitch_0
-    const-string v0, "\u7279\u60e0\u793c\u5305"
-
-    goto :goto_0
-
-    :pswitch_1
-    const-string v0, "\u8fc7\u5173\u798f\u5229"
-
-    goto :goto_0
-
-    :pswitch_2
-    const-string v0, "\u9000\u51fa\u793c\u5305"
-
-    goto :goto_0
-
-    :pswitch_3
-    const-string v0, "\u767b\u5f55\u5956\u52b1"
-
-    goto :goto_0
-
-    :pswitch_4
-    const-string v0, "\u9650\u91cf\u793c\u5305"
-
-    goto :goto_0
-
-    :pswitch_5
-    const-string v0, "\u5546\u57ce"
-
-    goto :goto_0
-
-    :pswitch_6
-    const-string v0, "\u5546\u57ce"
-
-    goto :goto_0
-
-    :pswitch_7
-    const-string v0, "\u5546\u57ce"
-
-    goto :goto_0
-
-    :pswitch_8
-    const-string v0, "\u5546\u57ce"
-
-    goto :goto_0
-
-    nop
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-        :pswitch_6
-        :pswitch_7
-        :pswitch_8
     .end packed-switch
 .end method
 
@@ -1183,165 +917,6 @@
 .method private static native paySuccess(I)V
 .end method
 
-.method public static resetData(I)V
-    .locals 2
-
-    const/4 v0, 0x0
-
-    packed-switch p0, :pswitch_data_0
-
-    :goto_0
-    invoke-static {v0}, Lorg/cocos2dx/cpp/AppActivity;->getFeePoint(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    sput-object v1, Lorg/cocos2dx/cpp/AppActivity;->priciePointId:Ljava/lang/String;
-
-    invoke-static {v0}, Lorg/cocos2dx/cpp/AppActivity;->getPMZZF(I)I
-
-    move-result v1
-
-    mul-int/lit8 v1, v1, 0x64
-
-    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    sput-object v1, Lorg/cocos2dx/cpp/AppActivity;->money:Ljava/lang/String;
-
-    invoke-static {v0}, Lorg/cocos2dx/cpp/AppActivity;->getDesc(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    sput-object v1, Lorg/cocos2dx/cpp/AppActivity;->priciePointDec:Ljava/lang/String;
-
-    invoke-static {v0}, Lorg/cocos2dx/cpp/AppActivity;->getPName(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    sput-object v0, Lorg/cocos2dx/cpp/AppActivity;->priciePointName:Ljava/lang/String;
-
-    invoke-static {}, Lorg/cocos2dx/cpp/AppActivity;->setData()V
-
-    return-void
-
-    :pswitch_0
-    const/4 v0, 0x4
-
-    goto :goto_0
-
-    :pswitch_1
-    const/4 v0, 0x6
-
-    goto :goto_0
-
-    :pswitch_2
-    const/4 v0, 0x7
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x3
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-    .end packed-switch
-.end method
-
-.method public static setData()V
-    .locals 3
-
-    sget-object v0, Lorg/cocos2dx/cpp/AppActivity;->map:Ljava/util/Map;
-
-    const-string v1, "channelId"
-
-    const-string v2, "1000100020000845"
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lorg/cocos2dx/cpp/AppActivity;->map:Ljava/util/Map;
-
-    const-string v1, "key"
-
-    const-string v2, "3F391F70A80445769B0A5A0CAE86209C"
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lorg/cocos2dx/cpp/AppActivity;->map:Ljava/util/Map;
-
-    const-string v1, "appId"
-
-    const-string v2, "2501"
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lorg/cocos2dx/cpp/AppActivity;->map:Ljava/util/Map;
-
-    const-string v1, "appName"
-
-    const-string v2, "PopStar\u6d88\u706d\u661f\u661f"
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lorg/cocos2dx/cpp/AppActivity;->map:Ljava/util/Map;
-
-    const-string v1, "appVersion"
-
-    const-string v2, "1"
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lorg/cocos2dx/cpp/AppActivity;->map:Ljava/util/Map;
-
-    const-string v1, "priciePointId"
-
-    sget-object v2, Lorg/cocos2dx/cpp/AppActivity;->priciePointId:Ljava/lang/String;
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lorg/cocos2dx/cpp/AppActivity;->map:Ljava/util/Map;
-
-    const-string v1, "money"
-
-    sget-object v2, Lorg/cocos2dx/cpp/AppActivity;->money:Ljava/lang/String;
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lorg/cocos2dx/cpp/AppActivity;->map:Ljava/util/Map;
-
-    const-string v1, "priciePointDec"
-
-    sget-object v2, Lorg/cocos2dx/cpp/AppActivity;->priciePointDec:Ljava/lang/String;
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lorg/cocos2dx/cpp/AppActivity;->map:Ljava/util/Map;
-
-    const-string v1, "priciePointName"
-
-    sget-object v2, Lorg/cocos2dx/cpp/AppActivity;->priciePointName:Ljava/lang/String;
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lorg/cocos2dx/cpp/AppActivity;->map:Ljava/util/Map;
-
-    const-string v1, "qd"
-
-    const-string v2, "zyap2501_53502_100"
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    sget-object v0, Lorg/cocos2dx/cpp/AppActivity;->map:Ljava/util/Map;
-
-    const-string v1, "cpparam"
-
-    sget-object v2, Lorg/cocos2dx/cpp/AppActivity;->cpparam:Ljava/lang/String;
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    return-void
-.end method
-
 .method public static setIsShowExitDialog(I)V
     .locals 0
 
@@ -1438,24 +1013,6 @@
     goto :goto_0
 .end method
 
-.method private zhangPay(I)V
-    .locals 2
-
-    invoke-static {p1}, Lorg/cocos2dx/cpp/AppActivity;->resetData(I)V
-
-    new-instance v0, Ljava/lang/Thread;
-
-    new-instance v1, Lorg/cocos2dx/cpp/AppActivity$11;
-
-    invoke-direct {v1, p0}, Lorg/cocos2dx/cpp/AppActivity$11;-><init>(Lorg/cocos2dx/cpp/AppActivity;)V
-
-    invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
-
-    return-void
-.end method
-
 
 # virtual methods
 .method public onBillingResult(ILandroid/os/Bundle;)V
@@ -1526,16 +1083,6 @@
     invoke-static {}, Lcom/b/a/a/a;->b()V
 
     invoke-direct {p0}, Lorg/cocos2dx/cpp/AppActivity;->initUserId()V
-
-    new-instance v0, Ljava/lang/Thread;
-
-    new-instance v1, Lorg/cocos2dx/cpp/AppActivity$4;
-
-    invoke-direct {v1, p0}, Lorg/cocos2dx/cpp/AppActivity$4;-><init>(Lorg/cocos2dx/cpp/AppActivity;)V
-
-    invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
-
-    invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
     invoke-static {}, Lcom/mgame/pay/main/Payment;->getInstance()Lcom/mgame/pay/main/Payment;
 
