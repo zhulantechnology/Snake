@@ -491,108 +491,6 @@
     .end packed-switch
 .end method
 
-.method public static getTongYunPayPrize(I)I
-    .locals 1
-
-    packed-switch p0, :pswitch_data_0
-
-    const/16 v0, 0x3e8
-
-    :goto_0
-    return v0
-
-    :pswitch_0
-    const/16 v0, 0x320
-
-    goto :goto_0
-
-    :pswitch_1
-    const/16 v0, 0x258
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x4
-        :pswitch_0
-        :pswitch_1
-    .end packed-switch
-.end method
-
-.method public static getTongYunPaycode(I)Ljava/lang/String;
-    .locals 1
-
-    packed-switch p0, :pswitch_data_0
-
-    const-string v0, "A12800"
-
-    :goto_0
-    return-object v0
-
-    :pswitch_0
-    const-string v0, "A12800"
-
-    goto :goto_0
-
-    :pswitch_1
-    const-string v0, "A12801"
-
-    goto :goto_0
-
-    :pswitch_2
-    const-string v0, "A12802"
-
-    goto :goto_0
-
-    :pswitch_3
-    const-string v0, "A12803"
-
-    goto :goto_0
-
-    :pswitch_4
-    const-string v0, "A12804"
-
-    goto :goto_0
-
-    :pswitch_5
-    const-string v0, "A12805"
-
-    goto :goto_0
-
-    :pswitch_6
-    const-string v0, "A12806"
-
-    goto :goto_0
-
-    :pswitch_7
-    const-string v0, "A12807"
-
-    goto :goto_0
-
-    :pswitch_8
-    const-string v0, "A12808"
-
-    goto :goto_0
-
-    :pswitch_9
-    const-string v0, "A12809"
-
-    goto :goto_0
-
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-        :pswitch_5
-        :pswitch_6
-        :pswitch_7
-        :pswitch_8
-        :pswitch_9
-    .end packed-switch
-.end method
-
 .method private handleAllResu(ZI)V
     .locals 1
 
@@ -925,46 +823,6 @@
     return-void
 .end method
 
-.method private tongyuPay(I)V
-    .locals 5
-
-    invoke-static {}, Lcom/mgame/pay/main/Payment;->getInstance()Lcom/mgame/pay/main/Payment;
-
-    move-result-object v0
-
-    invoke-static {}, Lorg/cocos2dx/cpp/AppActivity;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-static {p1}, Lorg/cocos2dx/cpp/AppActivity;->getTongYunPaycode(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    invoke-static {p1}, Lorg/cocos2dx/cpp/AppActivity;->getTongYunPayPrize(I)I
-
-    move-result v4
-
-    invoke-static {v4}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    new-instance v4, Lorg/cocos2dx/cpp/AppActivity$12;
-
-    invoke-direct {v4, p0}, Lorg/cocos2dx/cpp/AppActivity$12;-><init>(Lorg/cocos2dx/cpp/AppActivity;)V
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/mgame/pay/main/Payment;->pay(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Lcom/mgame/pay/IPayCallback;)V
-
-    return-void
-.end method
-
 .method private traceChongzhi(IILjava/lang/String;)V
     .locals 0
 
@@ -1083,24 +941,6 @@
     invoke-static {}, Lcom/b/a/a/a;->b()V
 
     invoke-direct {p0}, Lorg/cocos2dx/cpp/AppActivity;->initUserId()V
-
-    invoke-static {}, Lcom/mgame/pay/main/Payment;->getInstance()Lcom/mgame/pay/main/Payment;
-
-    move-result-object v0
-
-    invoke-static {}, Lorg/cocos2dx/cpp/AppActivity;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    new-instance v2, Lorg/cocos2dx/cpp/AppActivity$5;
-
-    invoke-direct {v2, p0}, Lorg/cocos2dx/cpp/AppActivity$5;-><init>(Lorg/cocos2dx/cpp/AppActivity;)V
-
-    const-string v3, "A128"
-
-    const-string v4, "zhangyu"
-
-    invoke-virtual {v0, v1, v2, v3, v4}, Lcom/mgame/pay/main/Payment;->init(Landroid/content/Context;Lcom/mgame/pay/IPayCallback;Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method

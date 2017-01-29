@@ -10,6 +10,4 @@
     <public type="string" name="content" id="0x7f030006" />
     <public type="style" name="AppBaseTheme" id="0x7f040000" />
     <public type="style" name="AppTheme" id="0x7f040001" />
-    <public type="style" name="HejuActivityStyle" id="0x7f040002" />
-    <public type="style" name="zy_pay_dialog_style" id="0x7f040003" />
 </resources>
