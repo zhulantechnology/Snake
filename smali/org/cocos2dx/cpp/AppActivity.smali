@@ -306,11 +306,10 @@
     sget v0, Lcom/chukong/cocosplay/client/b;->f:I
 
     const/4 v1, 0x1
-    invoke-direct {p0, v1, p1}, Lorg/cocos2dx/cpp/AppActivity;->handleAllResu(ZI)V
+
+	invoke-direct {p0, p1}, Lorg/cocos2dx/cpp/AppActivity;->yijiePay(I)V
 
     if-ne v0, v1, :cond_0
-
-
 
     :goto_0
     return-void
@@ -871,6 +870,42 @@
     goto :goto_0
 .end method
 
+.method private yijieExit()V
+    .locals 1
+
+    new-instance v0, Lorg/cocos2dx/cpp/AppActivity$16;
+
+    invoke-direct {v0, p0}, Lorg/cocos2dx/cpp/AppActivity$16;-><init>(Lorg/cocos2dx/cpp/AppActivity;)V
+
+    invoke-static {p0, v0}, Lcom/snowfish/cn/ganga/offline/helper/SFCommonSDKInterface;->onExit(Landroid/app/Activity;Lcom/snowfish/cn/ganga/offline/helper/SFGameExitListener;)V
+
+    return-void
+.end method
+
+.method private yijiePay(I)V
+    .locals 2
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    new-instance v1, Lorg/cocos2dx/cpp/AppActivity$14;
+
+    invoke-direct {v1, p0, p1}, Lorg/cocos2dx/cpp/AppActivity$14;-><init>(Lorg/cocos2dx/cpp/AppActivity;I)V
+
+    invoke-static {p0, v0, v1}, Lcom/snowfish/cn/ganga/offline/helper/SFCommonSDKInterface;->pay(Landroid/app/Activity;Ljava/lang/String;Lcom/snowfish/cn/ganga/offline/helper/SFIPayResultListener;)V
+
+    return-void
+.end method
+
 
 # virtual methods
 .method public onBillingResult(ILandroid/os/Bundle;)V
@@ -936,6 +971,7 @@
 
     invoke-static {p0}, Lcom/chukong/cocosplay/client/d;->a(Landroid/content/Context;)V
 
+    invoke-static {p0}, Lcom/snowfish/cn/ganga/offline/helper/SFCommonSDKInterface;->onInit(Landroid/app/Activity;)V
     invoke-static {p0}, Lcom/b/a/a/a;->d(Landroid/content/Context;)V
 
     invoke-static {}, Lcom/b/a/a/a;->b()V
@@ -949,6 +985,10 @@
     .locals 0
 
     invoke-super {p0}, Lorg/cocos2dx/lib/Cocos2dxActivity;->onDestroy()V
+	
+	invoke-static {p0}, Lcom/snowfish/cn/ganga/offline/helper/SFCommonSDKInterface;->onDestroy(Landroid/app/Activity;)V
+
+    invoke-direct {p0}, Lorg/cocos2dx/cpp/AppActivity;->yijieExit()V
 
     return-void
 .end method
@@ -1030,6 +1070,9 @@
     invoke-super {p0}, Lorg/cocos2dx/lib/Cocos2dxActivity;->onPause()V
 
     invoke-static {p0}, Lcom/b/a/a/a;->a(Landroid/content/Context;)V
+	
+	invoke-static {p0}, Lcom/snowfish/cn/ganga/offline/helper/SFCommonSDKInterface;->onPause(Landroid/app/Activity;)V
+
 
     return-void
 .end method
@@ -1040,6 +1083,9 @@
     invoke-super {p0}, Lorg/cocos2dx/lib/Cocos2dxActivity;->onResume()V
 
     invoke-static {p0}, Lcom/b/a/a/a;->b(Landroid/content/Context;)V
+	
+	invoke-static {p0}, Lcom/snowfish/cn/ganga/offline/helper/SFCommonSDKInterface;->onResume(Landroid/app/Activity;)V
+
 
     return-void
 .end method
