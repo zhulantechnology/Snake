@@ -787,7 +787,34 @@
 
 .method private initUserId()V
     .locals 4
-	
+
+    invoke-static {p0}, Lcom/snowfish/android/ahelper/APaymentUnity;->getUserId(Landroid/content/Context;)J
+
+    move-result-wide v0
+
+    const-string v2, "yj_user_id"
+
+    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lorg/cocos2dx/lib/Cocos2dxHelper;->setStringForKey(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lorg/cocos2dx/cpp/AppActivity;->useridHandler:Landroid/os/Handler;
+
+    const/16 v1, -0x3e8
+
+    const-wide/16 v2, 0x3e8
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->sendEmptyMessageDelayed(IJ)Z
+
+    :cond_0
     return-void
 .end method
 
